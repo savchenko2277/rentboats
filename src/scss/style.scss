@@ -1,0 +1,58 @@
+@use 'lib' as * with(
+	$breakpoints: (
+		'xxxs': 360px,
+		'xxs': 480px,
+		'xs': 640px,
+		'sm': 780px,
+		'md': 960px,
+		'lg': 1100px,
+		'xlg': 1280px,
+		'xxlg': 1440px,
+		'xxxlg': 1680px,
+		'xxxxlg': 1928px
+	)
+);
+
+@use "../blocks/**/*.scss";
+
+// Подключение шрифтов
+
+@include font-face("DMSans_18pt-Thin.ttf", "DM Sans", 100);
+@include font-face("DMSans_18pt-ExtraLight.ttf", "DM Sans", 200);
+@include font-face("DMSans_18pt-Light.ttf", "DM Sans", 300);
+@include font-face("DMSans_18pt-Regular.ttf", "DM Sans", 400);
+@include font-face("DMSans_18pt-Medium.ttf", "DM Sans", 500);
+@include font-face("DMSans_18pt-SemiBold.ttf", "DM Sans", 600);
+@include font-face("DMSans_18pt-Bold.ttf", "DM Sans", 700);
+@include font-face("DMSans_18pt-Black.ttf", "DM Sans", 900);
+
+body, html {
+	background-color: $bgColor;
+	font-size: 16px;
+	color: $textColor;
+	font-family: "DM Sans", sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+
+body {
+	&.scroll-lock {
+		overflow: hidden;
+		padding-right: var(--sw);
+	}
+}
+
+.footer {
+	flex: 0 0 auto; 
+	margin-top: auto; 
+}
+
+.sprite {
+	display: none;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }

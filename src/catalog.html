@@ -1,0 +1,718 @@
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
+
+<main class="main">
+    <section class="catalog">
+        <div class="catalog__container container">
+            <h2 class="catalog__title title">
+                Аренда яхт и катеров
+            </h2>
+            <div class="catalog__content">
+                <div class="catalog__side">
+                    <div class="catalog__selects">
+                        <div class="catalog__h-select">
+                            <button class="catalog__h-button active">
+                                <h4 class="catalog__h-button-title">Вариант 1</h4>
+                                <p class="catalog__h-button-desc">
+                                    Lorem, ipsum dolor.
+                                </p>
+                            </button>
+                            <button class="catalog__h-button">
+                                <h4 class="catalog__h-button-title">Вариант 2</h4>
+                                <p class="catalog__h-button-desc">
+                                    Lorem ipsum dolor sit.
+                                </p>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="catalog__filters-open btn btn_border">
+                        <img src="./img/icons/settings.svg" alt="">
+                        Фильтры
+                    </button>
+                    <div class="catalog__filters">
+                        <button class="catalog__filters-close close-button"></button>
+                        <div class="catalog__filters-container container">
+                            <div class="catalog__filter">
+                                <h4 class="catalog__filter-title">Тип 1</h4>
+                                <div class="catalog__filter-content">
+                                    <div class="catalog__filter-inputs">
+                                        <label class="catalog__checkbox">
+                                            <input type="checkbox" class="custom-checkbox" checked>
+                                        Вариант 1
+                                    </label>
+                                        <label class="catalog__checkbox">
+                                            <input type="checkbox" class="custom-checkbox">
+                                        Вариант 2
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__filter">
+                                <h4 class="catalog__filter-title">Тип 2</h4>
+                                <div class="catalog__filter-content">
+                                    <div class="catalog__filter-range" 
+                                        class="catalog__filter-range"
+                                        data-min="0"
+                                        data-max="105300"
+                                        data-start-min="10000"
+                                        data-start-max="80000"
+                                        data-step="100"
+                                        data-max-plus="true"
+                                    >
+                                        <div class="catalog__filter-range-slider"></div>
+                                        <div class="catalog__filter-range-values">
+                                            <div class="catalog__filter-range-field">
+                                                <div class="catalog__filter-range-label">Минимум</div>
+
+                                                <div class="catalog__filter-range-price">
+                                                    ₽ <span data-range-min>0</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="catalog__filter-range-field">
+                                                <div class="catalog__filter-range-label">Максимум</div>
+
+                                                <div class="catalog__filter-range-price">
+                                                    ₽ <span data-range-max>105300+</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__filter">
+                                <h4 class="catalog__filter-title">Длина яхты</h4>
+                                <div class="catalog__filter-content">
+                                    <div class="catalog__filter-range" 
+                                        class="catalog__filter-range"
+                                        data-min="0"
+                                        data-max="105300"
+                                        data-start-min="10000"
+                                        data-start-max="80000"
+                                        data-step="100"
+                                        data-max-plus="true"
+                                    >
+                                        <div class="catalog__filter-range-slider"></div>
+                                        <div class="catalog__filter-range-values">
+                                            <div class="catalog__filter-range-field">
+                                                <div class="catalog__filter-range-label">Минимум</div>
+
+                                                <div class="catalog__filter-range-price">
+                                                   <span data-range-min>0</span> м.
+                                                </div>
+                                            </div>
+
+                                            <div class="catalog__filter-range-field">
+                                                <div class="catalog__filter-range-label">Максимум</div>
+
+                                                <div class="catalog__filter-range-price">
+                                                    <span data-range-max>105300+</span> м.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__filter">
+                                <h4 class="catalog__filter-title">Мощность двигателя</h4>
+                                <div class="catalog__filter-content">
+                                    <div class="catalog__filter-range" 
+                                        class="catalog__filter-range"
+                                        data-min="0"
+                                        data-max="105300"
+                                        data-start-min="10000"
+                                        data-start-max="80000"
+                                        data-step="100"
+                                        data-max-plus="true"
+                                    >
+                                        <div class="catalog__filter-range-slider"></div>
+                                        <div class="catalog__filter-range-values">
+                                            <div class="catalog__filter-range-field">
+                                                <div class="catalog__filter-range-label">Минимум</div>
+
+                                                <div class="catalog__filter-range-price">
+                                                    <span data-range-min>0</span> л.с.
+                                                </div>
+                                            </div>
+
+                                            <div class="catalog__filter-range-field">
+                                                <div class="catalog__filter-range-label">Максимум</div>
+
+                                                <div class="catalog__filter-range-price">
+                                                    <span data-range-max>105300+</span> л.с.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__filter">
+                                <h4 class="catalog__filter-title">Тип 3</h4>
+                                <div class="catalog__filter-content">
+                                    <div class="catalog__quantity">
+                                        <h4 class="catalog__quantity-title">
+                                            Количество людей
+                                        </h4>
+                                        <div class="quantity" data-min="1" data-max="10">
+                                            <button type="button" class="quantity__button quantity__button-minus">–</button>
+                                            <input type="text" class="quantity__input" value="1">
+                                            <button type="button" class="quantity__button quantity__button-plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__quantity">
+                                        <h4 class="catalog__quantity-title">
+                                            Количество кают
+                                        </h4>
+                                        <div class="quantity" data-min="1" data-max="10">
+                                            <button type="button" class="quantity__button quantity__button-minus">–</button>
+                                            <input type="text" class="quantity__input" value="1">
+                                            <button type="button" class="quantity__button quantity__button-plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__quantity">
+                                        <h4 class="catalog__quantity-title">
+                                            Количество людей
+                                        </h4>
+                                        <div class="quantity" data-min="1" data-max="10">
+                                            <button type="button" class="quantity__button quantity__button-minus">–</button>
+                                            <input type="text" class="quantity__input" value="1">
+                                            <button type="button" class="quantity__button quantity__button-plus">+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="catalog__buttons">
+                                <button class="catalog__button btn btn_border">Сбросить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__cards">
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="product.html" class="c-card">
+                        <div class="c-card__image swiper">
+                            <div class="swiper-wrapper">
+                                <img src="./img/c-card/1.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/2.webp" alt="" class="c-card__image-slide swiper-slide">
+                                <img src="./img/c-card/3.webp" alt="" class="c-card__image-slide swiper-slide">
+                            </div>
+                            <div class="c-card__brings">
+                                <div class="c-card__bring c-card__bring">
+                                    Скидочное предложение
+                                </div>
+                                <div class="c-card__bring">
+                                    <img src="./img/icons/coin.svg" alt="">
+                                    Скидочное предложение
+                                </div>
+                            </div>
+                            <div class="c-card__navigation">
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_prev"></button>
+                                <button type="button" class="c-card__navigation-btn c-card__navigation-btn_next"></button>
+                            </div>
+                        </div>
+                        <div class="c-card__info">
+                            <h4 class="c-card__title">Name of product</h4>
+                            <p class="c-card__desc">
+                                Description of product
+                            </p>
+                            <div class="c-card__elements">
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан включён
+                                </b>
+                                <b class="c-card__element">
+                                    <img src="./img/icons/hat.svg" alt="">
+                                    Капитан
+                                </b>
+                            </div>
+                            <ul class="c-card__about-list">
+                                <li>example</li>
+                                <li>example</li>
+                                <li>example</li>
+                            </ul>
+                        </div>
+                        <div class="c-card__bottom">
+                            <ul class="c-card__list">
+                                <li>Maybe everyone</li>
+                                <li>Every maybe</li>
+                            </ul>
+                            <div class="c-card__price">
+                                От <b>67 000 Р</b>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include("_bottom.html")

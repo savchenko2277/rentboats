@@ -1,0 +1,266 @@
+@use 'lib' as *;
+
+.catalog {
+	$self: &;
+
+	padding-top: 120px;
+	padding-bottom: fluid(80px, 40px);
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: fluid(48px, 24px);
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: fluid(360px, 240px) 1fr;
+		position: relative;
+		gap: fluid(48px, 24px);
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__side {
+		position: sticky;
+		top: 80px;
+		left: 0px;
+		background: $card;
+		padding: 24px fluid(24px, 16px);
+		border-radius: 16px;
+		height: fit-content;
+
+		@include media("<=md") {
+			position: static;
+			padding: 0;
+			background: none;
+		}
+	}
+
+	&__selects {
+		margin-bottom: 16px;
+	}
+
+	&__h-select {
+		display: grid;
+		border-radius: 16px;
+		grid-template-columns: repeat(2, 1fr);
+		border-radius: 8px;
+		box-shadow: inset 0 0 0 2px rgba($color: #000000, $alpha: 0.2);
+		overflow: hidden;
+	}
+
+	&__h-button {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		text-align: start;
+		padding: 16px;
+		border-radius: 8px;
+
+		&.active {
+			background: rgba($color: $btnColor, $alpha: 0.2);
+			box-shadow: inset 0 0 0 2px rgba($color: $btnColor, $alpha: 0.5);
+			color: $btnColor;
+		}
+	}
+
+	&__h-button-title {
+		font-weight: 700;
+		font-size: fluid(18px, 16px);
+		margin-bottom: 8px;
+	}
+
+	&__h-button-desc {
+
+	}
+
+	&__filters-open.btn_border {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		box-shadow: inset 0 0 0 2px rgba($color: $textColor, $alpha: 1);
+		color: $textColor;
+		width: 100%;
+
+		&:hover {
+			background: none;
+			color: $textColor;
+		}
+
+		img {
+			width: 20px;
+			height: 20px;
+			object-fit: contain;
+		}
+
+		@include media(">md") {
+			display: none;
+		}
+	}
+
+	&__filters {
+		@include media("<=md") {
+			position: fixed;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			background: $card;
+			z-index: 100;
+			overflow-y: scroll;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: all $transition;
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+			}
+		}
+	}
+
+	&__filters-close {
+		position: absolute;
+		top: 24px;
+		right: 16px;
+
+		@include media(">md") {
+			display: none;
+		}
+	}
+
+	&__filters-container.container {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@include media(">md") {
+			width: 100%;
+		}
+
+		@include media("<=md") {
+			padding: 48px 0;
+			
+		}
+	}
+
+	&__filter {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__filter-title {
+		font-size: fluid(18px, 16px);
+		font-weight: 700;
+		margin-bottom: 8px;
+	}
+
+	&__filter-content {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__filter-inputs {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: fluid(24px, 16px);
+	}
+
+	&__checkbox {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		cursor: pointer;
+		
+	}
+
+	&__button {
+		width: 100%;
+	}
+
+	&__quantity {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+	}
+
+	&__quantity-title {
+		font-weight: 500;
+		font-size: fluid(18px, 16px);
+	}
+
+	&__filter-range {
+		
+		.noUi-handle {
+			cursor: pointer;
+			width: 24px !important;
+			height: 24px !important;
+			border-radius: 50%;
+			top: -6px !important;
+			
+			&::after, &::before {
+				display: none;
+			}
+		}
+		.noUi-connect {
+			background: $btnColor !important;
+			height: 12px !important;
+		}
+	}
+
+	&__filter-range-slider {
+		cursor: pointer;
+		margin-bottom: fluid(24px, 16px);
+		height: 12px !important;
+	}
+
+	&__filter-range-values {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 8px;
+	}
+
+	&__filter-range-field {
+		padding: 8px 16px;
+		border-radius: 8px;
+		box-shadow: inset 0 0 0 2px rgba($color: #000000, $alpha: 0.2);
+	}
+
+	&__filter-range-label {
+		font-size: fluid(16px, 14px);
+		font-weight: 600;
+	}
+
+	&__filter-range-price {
+		font-size: fluid(18px, 16px);
+	}
+
+	&__filter-range-separator {
+
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(24px, 16px);
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+}

@@ -1,0 +1,7 @@
+@use 'lib' as *;
+
+.s-p {
+	$self: &;
+
+	padding: fluid(96px, 48px) 0;
+}

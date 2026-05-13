@@ -1,0 +1,42 @@
+@use 'lib' as *;
+
+.quantity {
+	$self: &;
+
+	display: flex;
+	flex-direction: row;
+	border-radius: 4px;
+	overflow: hidden;
+	flex: 0 0 auto;
+
+	&__button {
+		@include flex-center;
+
+		width: 36px;
+		height: 36px;
+		color: #ffffff;
+		background: $btnColor;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1;
+	}
+
+	&__button-minus {
+
+	}
+
+	&__input {
+		width: 36px;
+		height: 36px;
+		appearance: none;
+		text-align: center;
+		background: $bgColor;
+		box-shadow: inset 0 0 0 2px rgba($color: #000000, $alpha: 0.1);
+		@include flex-center;
+	}
+
+	&__button-plus {
+
+	}
+
+}

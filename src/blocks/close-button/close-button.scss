@@ -1,0 +1,9 @@
+@use 'lib' as *;
+
+.close-button {
+	$self: &;
+
+	width: 24px;
+	height: 24px;
+	background: url("../img/icons/close.svg") no-repeat center / contain;
+}

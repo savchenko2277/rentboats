@@ -1,0 +1,15 @@
+@use 'lib' as *;
+
+.title {
+	$self: &;
+
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1.2;
+	font-size: fluid(42px, 28px);
+
+	b {
+		color: $accentColor;
+		
+	}
+}

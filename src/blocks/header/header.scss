@@ -1,0 +1,196 @@
+@use 'lib' as *;
+
+.header {
+	$self: &;
+
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: $card;
+
+	&.is-open {
+		#{$self}__menu {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+		}
+
+		#{$self}__burger {
+			span {
+				opacity: 0;
+				transform: translateX(100%);
+			}
+
+			&::after {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+
+			&::before {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 8px 0px;
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 1;
+
+		@include media("<=xs") {
+			height: 32px !important;
+		}
+	}
+
+	&__menu {
+		@include media("<=lg") {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $card;
+			padding-top: 64px;
+			transition: all $transition;
+
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		#{$self}__socials {
+			@include media(">lg") {
+				display: none;
+			}
+		}
+	}
+
+	&__menu-container {
+		@include media("<=lg") {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			gap: 48px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: fluid(24px, 16px);
+
+		@include media("<=lg") {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 24px;
+		}
+	}
+
+	&__list-item {}
+
+	&__list-link {
+		text-wrap: nowrap;
+		font-weight: 700;
+		transition: all $transition;
+
+		&:hover {
+			color: $accentColor;
+		}
+
+		@include media("<=lg") {
+			font-size: 18px;
+		}
+	}
+
+	&__side {
+
+		@include media("<=lg") {
+			display: none;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: fluid(32px, 16px);
+	}
+
+	&__social {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+		font-weight: 700;
+
+		img {
+			width: 28px;
+			height: 28px;
+			object-fit: contain;
+		}
+
+		@include media("<=lg") {
+			span {
+				display: none;
+			}
+		}
+	}
+
+	&__burger {
+
+		@include flex-center;
+
+		position: relative;
+		z-index: 1;
+		height: 16px;
+		width: 28px;
+		overflow: hidden;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: $textColor;
+			left: 0;
+			transition: all $transition;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		span {
+			background: $textColor;
+			height: 2px;
+			width: 100%;
+			transition: all $transition;
+		}
+		
+		@include media(">lg") {
+			display: none;
+		}
+	}
+
+}
