@@ -196,9 +196,9 @@
 
 	&__price {
 		text-wrap: nowrap;
-		grid-column: 2 / span 1;
+		font-size: fluid(18px, 16px);
 		b {
-			font-size: fluid(18px, 16px);
+			font-size: fluid(24px, 20px);
 		}
 	}
 

@@ -1,250 +1,172 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css?v=1779900756559">
-    <link rel="stylesheet" href="css/nouislider.css?v=1779900756559">
-    <link rel="stylesheet" href="css/swiper.css?v=1779900756559">
-    <title>Title of&#160;page</title>
-</head>
-<body>
-<header class="header">
-    <div class="header__container container">
-        <a href="#" class="header__logo" style="display: block; width: 200px; height: 48px; background: #000000;">
-            <img src="./img/logo.svg" alt="">
-        </a>
-        <div class="header__menu">
-            <div class="header__menu-container container">
-                <ul class="header__list">
-                    <li class="header__list-item">
-                        <a href="index.html" class="header__list-link">Главная</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="catalog.html" class="header__list-link">Аренда лодок</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="catalog.html" class="header__list-link">Моторные яхты</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="catalog.html" class="header__list-link">Парусные яхты</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="catalog.html" class="header__list-link">Катамараны</a>
-                    </li>
-                </ul>
-                <div class="header__socials">
-                    <a href="#" class="header__social">
-                        <img src="./img/icons/tg.svg" alt="">
-                    <span>Telegram</span>
-                </a>
-                    <a href="#" class="header__social">
-                        <img src="./img/icons/whatsapp.svg" alt="">
-                    <span>Whatsapp</span>
-                </a>
-                </div>
-            </div>
-        </div>
-        <div class="header__side">
-            <div class="header__socials">
-                <a href="#" class="header__social">
-                    <img src="./img/icons/tg.svg" alt="">
-                    <span>Telegram</span>
-                </a>
-                <a href="#" class="header__social">
-                    <img src="./img/icons/whatsapp.svg" alt="">
-                    <span>Whatsapp</span>
-                </a>
-            </div>
-        </div>
-        <div class="header__burger">
-            <span></span>
-        </div>
-    </div>
-</header>
+@@include("_head.html", {"id":"home"}) 
+@@include("_header.html") 
 
 <main class="main">
 
-    <section class="hero">
-        <div class="hero__container container">
-            <h1 class="hero__title title">
-                    Лучшее решение для&#160;аренды яхты.
-                </h1>
-            <p class="hero__desc">
-                    Более 55 000 частных яхт в&#160;аренду и&#160;бербоут-чартеры рядом со&#160;мной и&#160;по&#160;всему миру для&#160;Вашего следующего путешествия на&#160;яхте
-                </p>
-            <a href="#" class="hero__btn btn">Оставить заявку</a>
-        </div>
-        <div class="hero__bg">
-            <img loading="lazy" src="./img/hero-bg.webp" alt="">
-        </div>
-    </section>
-
-    <section class="disconts s-p">
-        <div class="disconts__container container">
-            <h2 class="disconts__title title"><b>Выгодные предложения</b> для&#160;вас</h2>
-            <div class="disconts__cards">
-                <div class="disconts__card">
-                    <p class="disconts__card-up">Специальное предложение</p>
-                    <img src="./img/types/1.webp" alt="" class="disconts__card-image">
-                    <div class="disconts__card-content">
-                        <h4 class="disconts__card-title">Возьмите лодку в&#160;аренду и&#160;получите яхту на&#160;24 часа в&#160;подарок</h4>
-                        <a href="#" class="disconts__card-btn btn">Подробнее</a>
+    <section class="product">
+        <div class="product__container container">
+            <div class="product__main">
+                <div class="product__gallery">
+                    <div class="product__gallery-main swiper">
+                        <div class="swiper-wrapper">
+                            <div class="product__gallery-main-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/1.webp" alt="">
+                            </div>
+                            <div class="product__gallery-main-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/2.webp" alt="">
+                            </div>
+                            <div class="product__gallery-main-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/3.webp" alt="">
+                            </div>
+                            <div class="product__gallery-main-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/1.webp" alt="">
+                            </div>
+                            <div class="product__gallery-main-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/2.webp" alt="">
+                            </div>
+                            <div class="product__gallery-main-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/3.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="product__info">
+                            <h1 class="product__title">Катер такой-то такой-то</h1>
+                            <h2 class="product__subtitle">Расположен на локации Тайланд, Пхукет, ЦБ</h2>
+                            <p class="product__price">
+                        116 000 р <span>216 000 р</span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="disconts__card">
-                    <p class="disconts__card-up">Специальное предложение</p>
-                    <img src="./img/types/2.webp" alt="" class="disconts__card-image">
-                    <div class="disconts__card-content">
-                        <h4 class="disconts__card-title">Возьмите лодку в&#160;аренду и&#160;получите яхту на&#160;24 часа в&#160;подарок</h4>
-                        <a href="#" class="disconts__card-btn btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="disconts__card">
-                    <p class="disconts__card-up">Специальное предложение</p>
-                    <img src="./img/types/3.webp" alt="" class="disconts__card-image">
-                    <div class="disconts__card-content">
-                        <h4 class="disconts__card-title">Возьмите лодку в&#160;аренду и&#160;получите яхту на&#160;24 часа в&#160;подарок</h4>
-                        <a href="#" class="disconts__card-btn btn">Подробнее</a>
+                    <div class="product__gallery-mini swiper">
+                        <div class="swiper-wrapper">
+                            <div class="product__gallery-mini-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/1.webp" alt="">
+                            </div>
+                            <div class="product__gallery-mini-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/2.webp" alt="">
+                            </div>
+                            <div class="product__gallery-mini-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/3.webp" alt="">
+                            </div>
+                            <div class="product__gallery-mini-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/1.webp" alt="">
+                            </div>
+                            <div class="product__gallery-mini-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/2.webp" alt="">
+                            </div>
+                            <div class="product__gallery-mini-slide swiper-slide">
+                                <img loading="lazy" src="./img/c-card/3.webp" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="survey">
-        <div class="survey__container container">
-            <h2 class="survey__title title">Исследуйте Тайланд</h2>
-            <p class="survey__desc">
-                Тропический рай
-            </p>
-            <a href="#" class="survey__btn btn btn_white">Исследовать</a>
-        </div>
-        <div class="survey__bg">
-            <img loading="lazy" src="./img/survey-bg.webp" alt="">
-        </div>
-    </section>
-
-    <section class="types s-p">
-        <div class="types__container container">
-            <h2 class="types__title title">На&#160;борту идеальной <b>лодки для&#160;вас</b></h2>
-            <div class="types__cards">
-                <a href="catalog.html" class="types__card">
-                    <img src="./img/types/1.webp" alt="" class="types__card-image">
-                    <h4 class="types__card-title">Моторная яхта</h4>
-                </a>
-                <a href="catalog.html" class="types__card">
-                    <img src="./img/types/2.webp" alt="" class="types__card-image">
-                    <h4 class="types__card-title">Парусная яхта</h4>
-                </a>
-                <a href="catalog.html" class="types__card">
-                    <img src="./img/types/3.webp" alt="" class="types__card-image">
-                    <h4 class="types__card-title">Катамарана</h4>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="owner s-p">
-        <div class="owner__container container">
-            <h2 class="owner__title title">Вы&#160;<b>владелец яхты?</b></h2>
-            <p class="owner__text">
-                Оцените чартерную стоимость вашей яхты, Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatum&#160;cum! Sequi!
-            </p>
-            <a href="#" class="owner__btn btn btn">Рассчитать стоимость</a>
-        </div>
-    </section>
-
-    <section class="articles s-p">
-        <div class="articles__container container">
-            <h2 class="articles__title title">Идеи и&#160;вдохновение <b>для&#160;вашего путешествия</b></h2>
-            <div class="articles__cards">
-                <a href="#" class="a-card">
-                    <img src="./img/survey-bg.webp" alt="" class="a-card__image">
-                    <div class="a-card__content">
-                        <h4 class="a-card__title">Lorem ipsum dolor sit amet.</h4>
-                        <p class="a-card__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam eum tempore aspernatur esse, soluta harum, voluptatibus adipisci inventore culpa est ratione, maxime iure quos quas quasi itaque facere obcaecati hic nisi?
-                        </p>
-                        <p class="a-card__date">01.01.2001</p>
+            <div class="product__columns">
+                <div class="product__about">
+                    <div class="product__about-content">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequuntur numquam et maiores tenetur doloremque eligendi?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem id maxime omnis cumque, perspiciatis illum, quo modi adipisci porro error est repellat inventore.</p>
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima possimus atque rerum delectus vel enim, temporibus distinctio totam? Labore a hic, fugiat ab quae commodi sit tempore incidunt sed placeat? Quo, impedit?</p>
                     </div>
-                </a>
-                <a href="#" class="a-card">
-                    <img src="./img/survey-bg.webp" alt="" class="a-card__image">
-                    <div class="a-card__content">
-                        <h4 class="a-card__title">Lorem ipsum dolor sit amet.</h4>
-                        <p class="a-card__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam eum tempore aspernatur esse, soluta harum, voluptatibus adipisci inventore culpa est ratione, maxime iure quos quas quasi itaque facere obcaecati hic nisi?
-                        </p>
-                        <p class="a-card__date">01.01.2001</p>
-                    </div>
-                </a>
-                <a href="#" class="a-card">
-                    <img src="./img/survey-bg.webp" alt="" class="a-card__image">
-                    <div class="a-card__content">
-                        <h4 class="a-card__title">Lorem ipsum dolor sit amet.</h4>
-                        <p class="a-card__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam eum tempore aspernatur esse, soluta harum, voluptatibus adipisci inventore culpa est ratione, maxime iure quos quas quasi itaque facere obcaecati hic nisi?
-                        </p>
-                        <p class="a-card__date">01.01.2001</p>
-                    </div>
-                </a>
-                <a href="#" class="a-card">
-                    <img src="./img/survey-bg.webp" alt="" class="a-card__image">
-                    <div class="a-card__content">
-                        <h4 class="a-card__title">Lorem ipsum dolor sit amet.</h4>
-                        <p class="a-card__desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam eum tempore aspernatur esse, soluta harum, voluptatibus adipisci inventore culpa est ratione, maxime iure quos quas quasi itaque facere obcaecati hic nisi?
-                        </p>
-                        <p class="a-card__date">01.01.2001</p>
-                    </div>
-                </a>
-            </div>
-            <a href="#" class="articles__btn btn">Посетите наш блог</a>
-        </div>
-    </section>
-
-    <section class="for s-p">
-        <div class="for__container container">
-            <h2 class="for__title title">Для&#160;<b>вас</b></h2>
-            <p class="for__desc">Если&#160;вы:</p>
-            <div class="for__types">
-                <div class="for__type">
-                    <h4 class="for__type-title">Арендатор судна</h4>
-                    <ul class="for__list">
-                        <li class="for__list-item">
-                            <img src="./img/for/1.svg" alt="">
-                            Просмотрите все наши объявления с&#160;помощью поисковой системы. Найдите моторную или&#160;парусную яхту в&#160;аренду возле себя или&#160;в&#160;нужном Вам месте по&#160;лучшей цене. Воспользуйтесь нашей страховкой &#171;все включено&#187;, чтобы Вы&#160;могли арендовать и&#160;перемещаться спокойно и&#160;в&#160;полной безопасности.
+                    <ul class="product__about-list">
+                        <li class="product__about-list-item">
+                            <div class="product__about-list-side">
+                                <img src="./img/icons/hat.svg" alt="">
+                                Капитан включен
+                            </div>
                         </li>
-                        <li class="for__list-item">
-                            <img src="./img/for/2.svg" alt="">
-                            С&#160;помощью нашего встроенного чата, Вы&#160;можете c&#160;легкостью связаться с&#160;владельцами яхт и&#160;подробнее узнать о&#160;об&#160;оборудовании и&#160;доступности выбранного Вами судна.
+                        <li class="product__about-list-item">
+                            <div class="product__about-list-side">
+                                <img src="./img/icons/hat.svg" alt="">
+                                Количество гостей
+                            </div>
+                            200
                         </li>
-                        <li class="for__list-item">
-                            <img src="./img/for/3.svg" alt="">
-                            Бронируйте онлайн напрямую и&#160;безопасно всего за&#160;несколько кликов и&#160;арендуйте яхту своей мечты. С&#160;Вас будет снята плата только в&#160;том случае, если&#160;Ваш запрос на&#160;чартер будет принят владельцем яхты. 100% безопасная оплата. Click&Boat&#160;&#8212; Ваш надежный партнер.
+                        <li class="product__about-list-item">
+                            <div class="product__about-list-side">
+                                <img src="./img/icons/hat.svg" alt="">
+                                Капитан включен
+                            </div>
+                        </li>
+                        <li class="product__about-list-item">
+                            <div class="product__about-list-side">
+                                <img src="./img/icons/hat.svg" alt="">
+                                Капитан включен
+                            </div>
+                        </li>
+                        <li class="product__about-list-item">
+                            <div class="product__about-list-side">
+                                <img src="./img/icons/hat.svg" alt="">
+                                Капитан включен
+                            </div>
                         </li>
                     </ul>
-                    <a href="#" class="for__type-btn btn">Найти яхту</a>
                 </div>
-                <div class="for__type">
-                    <h4 class="for__type-title">Арендатор судна</h4>
-                    <ul class="for__list">
-                        <li class="for__list-item">
-                            <img src="./img/for/4.svg" alt="">
-                           Создайте бесплатное объявление, чтобы сделать Вашу яхту доступной для&#160;аренды другим людям. Яхты, парусники, надувные лодки, моторные яхты, катамараны&#160;&#8212; все они приветствуются на&#160;Click&Boat!
-                        </li>
-                        <li class="for__list-item">
-                            <img src="./img/for/5.svg" alt="">
-                            С&#160;помощью наших услуг, Вы&#160;сможете сдавать в&#160;аренду свой водный транспорт кому угодно, куда угодно и&#160;по&#160;установленной Вами цене. Click&Boat помогает Вам как&#160;в&#160;содержании Ваших судов, так и&#160;в&#160;их&#160;монетизации.
-                        </li>
-                        <li class="for__list-item">
-                            <img src="./img/for/6.svg" alt="">
-                            В&#160;пакет предлагаемого нами страхования входит покрытие страховых случаев до&#160;8 миллионов евро, а&#160;также депозит. Наши профессионалы помогут Вам в&#160;надёжном страховании и&#160;организации чартера Ваших морских судов.
-                        </li>
-                    </ul>
-                    <a href="#" class="for__type-btn btn">Найти яхту</a>
+                <div class="product__form">
+                    <div class="product__date swiper">
+                        <div class="swiper-wrapper">
+                            <div class="product__date-slide swiper-slide">
+                                <label class="product__date-select">
+                                    <input name="booking-date" type="radio" checked>
+                                    <span>Пятница</span>
+                                    29
+                                    <span>Май</span>
+                                </label>
+                            </div>
+                            <div class="product__date-slide swiper-slide">
+                                <label class="product__date-select">
+                                    <input name="booking-date" type="radio">
+                                    <span>Пятница</span>
+                                    29
+                                    <span>Май</span>
+                                </label>
+                            </div>
+                            <div class="product__date-slide swiper-slide">
+                                <label class="product__date-select">
+                                    <input name="booking-date" type="radio">
+                                    <span>Пятница</span>
+                                    29
+                                    <span>Май</span>
+                                </label>
+                            </div>
+                            <div class="product__date-slide swiper-slide">
+                                <label class="product__date-select">
+                                    <input name="booking-date" type="radio">
+                                    <span>Пятница</span>
+                                    29
+                                    <span>Май</span>
+                                </label>
+                            </div>
+                            <div class="product__date-slide swiper-slide">
+                                <label class="product__date-select">
+                                    <input name="booking-date" type="radio">
+                                    <span>Пятница</span>
+                                    29
+                                    <span>Май</span>
+                                </label>
+                            </div>
+                            <div class="product__date-slide swiper-slide">
+                                <label class="product__date-select">
+                                    <input name="booking-date" type="radio">
+                                    <span>Пятница</span>
+                                    29
+                                    <span>Май</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="product__form-submit btn">Забронировать</button>
+                    <p class="product__form-desc">no obligations, cancel anytime — it's free.</p>
+                    <div class="product__variants">
+                        <h4 class="product__variants-title">OR</h4>
+                        <div class="product__variants-buttons">
+                            <a href="#" class="product__variants-button btn btn_border">+7 999 999 11 11</a>
+                            <a href="#" class="product__variants-button btn btn_border">+7 999 999 11 11</a>
+                            <a href="#" class="product__variants-button btn btn_border">+7 999 999 11 11</a>
+                            <a href="#" class="product__variants-button btn btn_border">+7 999 999 11 11</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -315,7 +237,7 @@
                         </div>
                         <div class="r-card__content">
                             <p class="r-card__text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae voluptatem dignissimos accusamus suscipit deserunt, tenetur maxime ex&#160;assumenda officiis facere est&#160;eos. Eaque, maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eligendi!
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae voluptatem dignissimos accusamus suscipit deserunt, tenetur maxime ex assumenda officiis facere est eos. Eaque, maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eligendi!
                             </p>
                             <a href="#" class="r-card__more">Читать больше</a>
                         </div>
@@ -435,7 +357,7 @@
                         </div>
                         <div class="r-card__content">
                             <p class="r-card__text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae voluptatem dignissimos accusamus suscipit deserunt, tenetur maxime ex&#160;assumenda officiis facere est&#160;eos. Eaque, maiores!
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae voluptatem dignissimos accusamus suscipit deserunt, tenetur maxime ex assumenda officiis facere est eos. Eaque, maiores!
                             </p>
                             <a href="#" class="r-card__more">Читать больше</a>
                         </div>
@@ -495,7 +417,7 @@
                         </div>
                         <div class="r-card__content">
                             <p class="r-card__text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae voluptatem dignissimos accusamus suscipit deserunt, tenetur maxime ex&#160;assumenda officiis facere est&#160;eos. Eaque, maiores!
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae voluptatem dignissimos accusamus suscipit deserunt, tenetur maxime ex assumenda officiis facere est eos. Eaque, maiores!
                             </p>
                             <a href="#" class="r-card__more">Читать больше</a>
                         </div>
@@ -507,58 +429,4 @@
 
 </main>
 
-<footer class="footer">
-    <div class="footer__container container">
-        <div class="footer__main">
-            <div class="footer__side">
-                <a href="#" class="footer__logo" style="display: block; width: 200px; height: 48px; background: #000000;">
-                    <img src="./img/logo.svg" alt="">
-                </a>
-                <p class="footer__desc">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus repellat, similique nam facilis, doloribus nemo enim numquam id&#160;deleniti reiciendis, odit illum mollitia ducimus! Itaque pariatur harum, repellendus natus quas neque error!
-                </p>
-            </div>
-            <div class="footer__columns">
-                <div class="footer__column">
-                    <h4 class="footer__column-title title">Навигация</h4>
-                    <ul class="footer__list">
-                        <li class="footer__list-item"><a href="#" class="footer__list-link">Главная</a></li>
-                        <li class="footer__list-item"><a href="#" class="footer__list-link">Аренда лодок</a></li>
-                        <li class="footer__list-item"><a href="#" class="footer__list-link">О&#160;нас</a></li>
-                        <li class="footer__list-item"><a href="#" class="footer__list-link">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="footer__column">
-                    <h4 class="footer__column-title title">Контакты</h4>
-                    <div class="footer__contacts">
-                        <a href="#" class="footer__contact">
-                            <img loading="lazy" src="./img/icons/call.svg" alt="">
-                            +1 (124) 738 3444
-                        </a>
-                        <a href="#" class="footer__contact">
-                            <img loading="lazy" src="./img/icons/mail.svg" alt="">
-                            example@example.com
-                        </a>
-                        <a href="#" class="footer__contact">
-                            <img loading="lazy" src="./img/icons/tg.svg" alt="">
-                            Telegram
-                        </a>
-                        <a href="#" class="footer__contact">
-                            <img loading="lazy" src="./img/icons/whatsapp.svg" alt="">
-                            Whatsapp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <p class="footer__bottom-text">&#169; Click&Boat 2026&#160;&#8212; Все права защищены</p>
-            <a href="#" class="footer__bottom-link">Политика конфидициальности</a>
-            <a href="#" class="footer__bottom-link">Политика конфидициальности</a>
-        </div>
-    </div>
-</footer>
-
-<script src="js/common.js?v=1779900756559"></script>
-</body>
-</html>
+@@include("_bottom.html")

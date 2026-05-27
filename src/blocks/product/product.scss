@@ -1,0 +1,297 @@
+@use 'lib' as *;
+
+.product {
+	$self: &;
+
+	padding-top: 90px;
+
+	@include media("<=xs") {
+		padding-top: 64px;
+	}
+
+	&__container {}
+
+	&__main {
+		position: relative;
+		margin-bottom: 48px;
+	}
+
+	&__gallery {
+		display: grid;
+		grid-template-columns: 1fr fluid(320px, 200px);
+		gap: fluid(24px, 16px);
+		height: fluid(640px, 420px);
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+			height: auto;
+			gap: 8px;
+		}
+	}
+
+	&__gallery-main.swiper {
+		max-width: 100%;
+		position: relative;
+
+		@include media("<=xs") {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+
+	&__gallery-main-slide {
+		position: relative;
+		border-radius: 8px;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		@include media("<=xs") {
+			aspect-ratio: 4 / 4;
+		}
+	}
+
+	&__gallery-mini-slide.swiper-slide {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		width: 100%;
+		border-radius: 8px;
+		overflow: hidden;
+		padding: 4px;
+		border: 2px solid transparent;
+		transition: all $transition;
+
+		&.swiper-slide-thumb-active {
+			border: 2px solid $btnColor;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		@include media("<=xs") {
+			aspect-ratio: 4 / 4;
+		}
+	}
+
+	&__gallery-mini {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__info {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		padding: 16px;
+		background: rgba($color: #ffffff, $alpha: 0.9);
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+
+		@include media("<=xs") {
+			
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: fluid(20px, 18px);
+	}
+
+	&__subtitle {
+		font-size: 14px;
+	}
+
+	&__price {
+		font-size: fluid(20px, 18px);
+		font-weight: 700;
+
+		span {
+			font-size: fluid(16px, 14px);
+			text-decoration: line-through;
+			font-weight: 500;
+		}
+	}
+
+	&__columns {
+		display: grid;
+		grid-template-columns: 1fr 320px;
+		gap: 24px;
+		
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__about {}
+
+	&__about-content {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		line-height: 120%;
+		max-width: 720px;
+		margin-bottom: fluid(32px, 24px);
+
+		h2 {
+			font-size: fluid(20px, 18px);
+			font-weight: 700;
+		}
+	}
+
+	&__about-list {
+		padding: 24px;
+		background: $card;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	&__about-list-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+		font-size: fluid(20px, 16px);
+	}
+
+	&__about-list-side {
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+		font-weight: 500;
+		text-wrap: nowrap;
+		width: 100%;
+		flex: 1 1 auto;
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 1px;
+			background: rgba($color: #000000, $alpha: 0.5);
+			flex: 1 1 auto;
+		}
+
+		img {
+			width: fluid(28px, 20px);
+			height: fluid(28px, 20px);
+			object-fit: contain;
+		}
+	}
+
+	&__form {
+		top: 120px;
+		left: 0;
+		position: sticky;
+		background: $card;
+		height: fit-content;
+		padding: fluid(24px, 16px);
+		border-radius: 8px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include media("<=md") {
+			top: 0;
+			left: 0;
+			position: static;
+		}
+	}
+
+	&__date {
+		margin-bottom: 16px;
+		max-width: 100%;
+	}
+
+	&__date-slide.swiper-slide {
+		
+	}
+
+	&__date-select {
+		padding: 16px 8px;
+		background: rgb(236, 236, 236);
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: 700;
+		gap: 4px;
+		span {
+			opacity: 0.9;
+			font-size: 12px;
+		}
+
+		input {
+			display: none;
+			appearance: none;
+		}
+
+		&:has(input:checked) {
+			background: $btnColor;
+			color: #ffffff;
+		}
+	}
+
+	&__form-submit {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	&__form-desc {
+		font-size: 14px;
+		margin-bottom: 16px;
+	}
+
+	&__variants {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__variants-title {
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+
+	&__variants-buttons {
+		width: 100%;
+		gap: 4px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	&__variants-button {
+		width: 100%;
+	}
+
+}

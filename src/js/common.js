@@ -2,7 +2,7 @@ import { throttle } from "./libs/utils";
 import "./polyfills.js";
 import "./blocks.js";
 import noUiSlider from 'nouislider'
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 
 import { initSwipers } from "./swipers.js";
 
@@ -146,6 +146,46 @@ const setFiltersModal = () => {
 	});
 }
 
+const setProduct = () => {
+	const block = document.querySelector('.product');
+	if (!block) return;
+
+	const galleryMiniSwiper = new Swiper('.product__gallery-mini', {
+		slidesPerView: 4,
+		spaceBetween: 10,
+		direction: 'vertical',
+		slideToClickedSlide: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			0: {
+				slidesPerView: 3.2,
+				direction: 'horizontal',
+				spaceBetween: 8,
+			},
+			640: {
+				direction: 'horizontal',
+				spaceBetween: 8,
+			}
+		}
+	});
+
+	const galleryMainSwiper = new Swiper('.product__gallery-main', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		thumbs: {
+			swiper: galleryMiniSwiper,
+		},
+	});
+
+	const dateSwiper = new Swiper('.product__date', {
+		slidesPerView: 3,
+		slideToClickedSlide: true,
+		spaceBetween: 8,
+	});
+
+}
+
+
 window.addEventListener('load', () => {
 	setScrollbarWidth();
 	setHeader();
@@ -153,4 +193,5 @@ window.addEventListener('load', () => {
 	setQuantities();
 	initSwipers();
 	setFiltersModal();
+	setProduct();
 })
