@@ -185,6 +185,69 @@ const setProduct = () => {
 
 }
 
+const setMainFilters = () => {
+    const block = document.querySelector('.main-filters');
+    if (!block) return;
+
+    const items = block.querySelectorAll('.main-filters__item');
+
+    const closeAllFilters = (exceptItem = null) => {
+        items.forEach((item) => {
+            if (item !== exceptItem) {
+                item.classList.remove('active');
+                const content = item.querySelector('.main-filters__item-content');
+                if (content) content.classList.remove('active');
+            }
+        });
+    };
+
+    items.forEach((item) => {
+        const windowBtn = item.querySelector('.main-filters__item-window');
+        const content = item.querySelector('.main-filters__item-content');
+        const spanDisplay = windowBtn ? windowBtn.querySelector('p span') : null;
+
+        // Открытие/закрытие
+        if (windowBtn) {
+            windowBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpening = !item.classList.contains('active');
+                closeAllFilters(isOpening ? item : null);
+                item.classList.toggle('active');
+                if (content) content.classList.toggle('active');
+            });
+        }
+
+        // Выбор Radio
+        const radios = item.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (spanDisplay) {
+                    // Берем текст из лейбла, который идет сразу за инпутом
+                    spanDisplay.textContent = radio.parentElement.textContent.trim();
+                }
+                item.classList.remove('active');
+                if (content) content.classList.remove('active');
+            });
+        });
+    });
+
+    // Интеграция календаря (второй элемент, индекс 1)
+    const calendarItem = items[1];
+    const calendarContent = calendarItem.querySelector('.main-filters__item-content');
+    if (calendarContent) {
+        new AirDatepicker(calendarContent, {
+            inline: true,
+            onSelect({formattedDate}) {
+                const span = calendarItem.querySelector('.main-filters__item-window p span');
+                if (span) span.textContent = formattedDate;
+                calendarItem.classList.remove('active');
+                calendarContent.classList.remove('active');
+            }
+        });
+    }
+
+    document.addEventListener('click', () => closeAllFilters());
+};
 
 window.addEventListener('load', () => {
 	setScrollbarWidth();
@@ -194,4 +257,5 @@ window.addEventListener('load', () => {
 	initSwipers();
 	setFiltersModal();
 	setProduct();
+	setMainFilters();
 })

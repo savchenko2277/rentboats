@@ -1,6 +1,19 @@
 import Swiper from 'swiper';
-import { EffectFade, Navigation } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 export const initSwipers = () => {
+    const heroSwiper = new Swiper('.hero__bg', {
+        modules: [EffectFade, Navigation, Autoplay],
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 5000
+        },
+        fadeEffect: {
+            crossFade: true
+        }
+    });
     const cardGallerySwiper = new Swiper('.c-card__image', {
         modules: [EffectFade, Navigation],
         slidesPerView: 1,

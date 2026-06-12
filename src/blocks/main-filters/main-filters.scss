@@ -1,0 +1,106 @@
+@use 'lib' as *;
+
+.main-filters {
+	$self: &;
+
+	background: $card;
+	color: #000000;
+	border-radius: 16px;
+
+	display: grid;
+	grid-template-columns: 1fr 240px;
+	gap: 24px;
+
+	@include media("<=md") {
+		grid-template-columns: 100%;
+	}
+
+	&.catalog {
+		padding: 16px 48px;
+
+		@include media("<=md") {
+			padding: 24px 16px;
+		}
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: row;
+		gap: 12px;
+		flex-wrap: wrap;
+		@include media("<=xs") {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+
+		position: relative;
+
+		&.active &-content {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+		}
+
+		&.active &-window::after {
+			transform: translateY(-50%) rotate(180deg);
+		}
+
+		&-content {
+			position: absolute;
+			top: calc(100% + 8px);
+			left: 0;
+			width: 100%;
+			min-width: fit-content;
+			padding: 16px;
+			background: #ffffff;
+			box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+			border-radius: 16px;
+			z-index: 2;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: all $transition;
+		}
+
+		&-window {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 16px;
+			padding: 12px fluid(24px, 16px);
+			border-radius: 8px;
+			box-shadow: inset 0 0 0 2px $btnColor;
+			font-size: fluid(18px, 16px);
+			cursor: pointer;
+			padding-right: 48px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 16px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 16px;
+				height: 16px;
+				background: url("../img/icons/arrow-down.svg") no-repeat center / contain;
+				transition: all $transition;
+			}
+		}
+
+		&-icon {
+			width: fluid(24px, 20px);
+			height: fluid(24px, 20px);
+			object-fit: contain;
+		}
+	}
+
+	&__btn {
+		height: fit-content;
+	}
+
+	&__bottom {}
+
+}
